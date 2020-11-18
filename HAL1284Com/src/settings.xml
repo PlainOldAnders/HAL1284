@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+   <COMPort>
+      <details>Auto picks the first COM port (which is usually correct). If changed to manual, CLI will ask</details>
+      <options>auto, manual</options>
+      <unit_type>string</unit_type>
+      <value>auto</value>
+   </COMPort>
+   <writeSpeed>
+      <details>WriteSpeed is a delay between all lines written to the HAL1284 via the COM port. Delay porbably isn't needed</details>
+      <options>Well, not to high I guess</options>
+      <unit_type>Integer in ms</unit_type>
+      <value>50</value>
+   </writeSpeed>
+</settings>

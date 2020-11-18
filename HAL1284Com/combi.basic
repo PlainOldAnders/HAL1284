@@ -1,0 +1,138 @@
+// Start by clearing
+20 clear
+//Ball jumps in
+40 
+50 tone 587, 600
+60 drawcirc 5, 5, 5, 1, 1
+70 delay 200
+80 drawcirc 5, 5, 5, 0, 0
+90 drawcirc 14, 7, 5, 1, 1
+100 delay 200
+110 drawcirc 14, 7, 5, 0, 0
+120 drawcirc 25, 19, 5, 1, 1
+130 delay 200
+140 
+150 tone 494, 600
+160 drawcirc 25, 19, 5, 0, 0
+170 drawcirc 31, 34, 7, 1, 1
+180 delay 200
+190 drawcirc 31, 34, 7, 0, 0
+200 drawcirc 34, 21, 8, 1, 1
+210 delay 200
+220 drawcirc 34, 21, 8, 0, 0
+230 drawcirc 38, 14, 9, 1, 1
+240 delay 200
+250 
+260 tone 392, 600
+270 drawcirc 38, 14, 9, 0, 0
+280 drawcirc 45, 14, 12, 1, 1
+290 delay 200
+300 drawcirc 45, 14, 12, 0, 0
+310 drawcirc 50, 21, 15, 1, 1
+320 delay 200
+330 drawcirc 50, 21, 15, 0, 0
+340 drawcirc 54, 34, 15, 1, 1
+350 delay 200
+360 
+370 tone 294, 600
+380 drawcirc 54, 34, 15, 0, 0
+390 drawcirc 56, 24, 15, 1, 1
+400 delay 200
+410 drawcirc 56, 24, 15, 0, 0
+420 drawcirc 59, 22, 15, 1, 1
+430 delay 200
+440 drawcirc 59, 22, 15, 0, 0
+450 drawcirc 62, 24, 15, 1, 1
+460 delay 200
+470 
+480 tone 330, 200
+490 drawcirc 62, 24, 15, 0, 0
+500 drawcirc 64, 34, 15, 1, 1
+510 delay 200
+520 
+//Pupil appears
+540 tone 370, 200
+550 drawcirc 79, 34, 1, 0, 0
+560 delay 100
+570 drawcirc 79, 34, 1, 1, 1 
+580 drawcirc 78, 34, 1, 0, 0
+590 delay 100
+600 
+610 tone 392, 200
+620 drawcirc 78, 34, 1, 1, 1 
+630 drawcirc 77, 34, 1, 0, 0
+640 delay 100
+650 drawcirc 77, 34, 1, 1, 1 
+660 drawcirc 76, 34, 2, 0, 0
+670 delay 100
+680 
+690 tone 330, 400
+700 drawcirc 76, 34, 2, 1, 1 
+710 drawcirc 74, 34, 3, 0, 0
+720 delay 100
+730 drawcirc 74, 34, 3, 1, 1 
+740 drawcirc 72, 34, 3, 0, 0
+750 delay 100
+760 drawcirc 72, 34, 3, 1, 1 
+770 drawcirc 69, 34, 3, 0, 0
+780 delay 100
+790 drawcirc 69, 34, 3, 1, 1 
+800 drawcirc 66, 34, 3, 0, 0
+810 delay 100
+820 
+830 tone 392, 200
+840 drawcirc 66, 34, 3, 1, 1 
+850 drawcirc 64, 34, 3, 0, 0
+860 delay 200
+870 
+880 tone 294, 1200
+890 
+900 delay 200
+910 
+//Pupil grows large
+930 drawcirc 64, 34, 3, 1, 1
+940 drawcirc 64, 34, 5, 0, 3
+950 delay 200
+960 drawcirc 64, 34, 5, 1, 1
+970 drawcirc 64, 34, 8, 0, 3
+980 delay 200
+990 drawcirc 64, 34, 8, 1, 1
+1000 drawcirc 64, 34, 9, 0, 3
+1010 delay 200
+1020 drawcirc 64, 34, 9, 1, 1
+1030 drawcirc 64, 34, 11, 0, 3
+1040 delay 200
+1050 drawcirc 64, 34, 11, 1, 1
+1060 drawcirc 64, 34, 12, 0, 3
+1070 delay 200
+1080 
+1090 tone 440, 600
+1100 drawcirc 64, 34, 12, 1, 1
+1110 drawcirc 64, 34, 13, 0, 3
+1120 delay 200
+1130 
+//Write title
+1150 delay 300
+1160 drawchar 49, 3, H
+1170 delay 100
+1180 
+1190 tone 587, 600
+1200 delay 50
+1210 
+1220 drawchar 55, 3, E
+1230 delay 150
+1240 drawchar 61, 3, L
+1250 delay 150
+1260 drawchar 67, 3, L
+1270 delay 150
+1280 drawchar 73, 3, O
+1290 delay 100
+1300 
+1310 tonew 494, 600
+1320 tonew 392, 600
+1330 tonew 330, 200
+1340 tonew 370, 200
+1350 tonew 392, 200
+1360 tonew 440, 400
+1370 tonew 494, 200
+1380 tonew 440, 1200
