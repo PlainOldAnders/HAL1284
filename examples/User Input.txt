@@ -1,0 +1,7 @@
+5 REM "Enter number like 33 or var like 'b'."
+10 A=0
+15 B=999
+20 PRINT "A is ", A
+30 PRINT "Enter a new value ";
+40 INPUT A
+50 PRINT "A is now ", A

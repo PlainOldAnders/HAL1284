@@ -1,6 +1,6 @@
-// Start by clearing
+10 REM "Start by clearing"
 20 clear
-//Ball jumps in
+30 REM "Ball jumps in"
 40 
 50 tone 587, 600
 60 drawcirc 5, 5, 5, 1, 1
@@ -50,7 +50,7 @@
 500 drawcirc 64, 34, 15, 1, 1
 510 delay 200
 520 
-//Pupil appears
+530 REM "Pupil appears"
 540 tone 370, 200
 550 drawcirc 79, 34, 1, 0, 0
 560 delay 100
@@ -89,7 +89,7 @@
 890 
 900 delay 200
 910 
-//Pupil grows large
+920 REM "Pupil Grows"
 930 drawcirc 64, 34, 3, 1, 1
 940 drawcirc 64, 34, 5, 0, 3
 950 delay 200
@@ -111,7 +111,7 @@
 1110 drawcirc 64, 34, 13, 0, 3
 1120 delay 200
 1130 
-//Write title
+1140 REM "Title"
 1150 delay 300
 1160 drawchar 49, 3, H
 1170 delay 100

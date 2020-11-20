@@ -1,0 +1,10 @@
+5 REM "Potentiometeter on A2 and ground"
+6 REM "Led pin 3 and ground."
+7 REM "If knob is at 0, it stops"
+10 A = AREAD( 2 )
+20 PRINT A
+30 B = A / 4
+40 AWRITE 3, B
+50 IF A = 0 GOTO 100
+60 GOTO 10
+100 PRINT "Done."
