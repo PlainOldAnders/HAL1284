@@ -1,0 +1,120 @@
+REM "Clear screen"
+clear
+
+REM "Draw landscape"
+drawrect 0, 40, 128, 16, 1, 1
+drawcirc 20, 51, 20, 1, 1
+drawcirc 60, 50, 15, 1, 1
+drawcirc 120, 53, 15, 1, 1
+
+
+REM "Initialize notes"
+A = 440
+B = 490
+C = 260
+D = 290
+E = 330
+F = 350
+G = 392
+
+REM "Tempo"
+T = 300
+
+REM "Initialize vals"
+Y = 0
+V = 0
+P = 660
+
+REM "Make Snow"
+for X = V to 128 step 16
+drawpix X, Y, 1
+next X
+
+REM "Update values"
+Y = Y + 8
+if V = 0 goto 460
+if V = 8 V = 0
+if Y > 56 gosub 500
+
+
+P = P + 20
+gosub P
+goto 280
+
+
+
+REM "Mock ELSE"
+V = 8
+goto 370
+
+REM "Draw HAL1284"
+Y = 0
+drawchar 40, 26, H
+drawchar 47, 26, A
+drawchar 54, 26, L
+drawchar 65, 26, 1
+drawchar 72, 26, 2
+drawchar 79, 26, 8
+drawchar 86, 26, 4
+drawrect 37, 24, 25, 9, 1, 3
+drawrect 63, 24, 31, 9, 1, 2
+drawcirc 64, 15, 12, 1, 3
+drawcirc 64, 15, 9, 1, 1
+RETURN
+
+
+
+REM "Jingle Bells"
+TONEW E, 1*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW E, 2*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW E, 2*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW G, 1*T
+RETURN
+TONEW C, 1*T
+RETURN
+TONEW D, 1*T
+RETURN
+TONEW E, 4*T
+RETURN
+DELAY 1*T
+RETURN
+TONEW F, 1*T
+RETURN
+TONEW F, 1*T
+RETURN
+TONEW F, 1*T
+RETURN
+TONEW F, 1*T
+RETURN
+TONEW F, 1*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW E, 1*T
+RETURN
+TONEW D, 1*T 
+RETURN
+TONEW D, 1*T 
+RETURN
+TONEW E, 1*T 
+RETURN
+TONEW D, 2*T 
+RETURN
+TONEW G, 2*T 
+RETURN
+DELAY 1000

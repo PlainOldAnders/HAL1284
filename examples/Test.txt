@@ -1,0 +1,49 @@
+10 CLEAR
+20 
+30 REM "Assign Keys"
+40 LET W = 11
+50 LET S = 22
+60 LET A = 33
+70 LET D = 44
+80 LET C = 55
+90 LET L = 66
+100 LET T = 5
+110 
+120 REM "Assign init size"
+130 LET X = 64
+140 LET Y = 20
+150 
+160 REM "Check input"
+170 print "Hit a key: "
+180 drawcirc X, Y, 10, 1, 1
+190 input I
+200 if I = W goto 260
+210 if I = A goto 300
+220 if I = S goto 340
+230 if I = D goto 380
+240 if I = C goto 430
+250 if I = L goto 450
+260 REM "W"
+270 clear
+280 LET Y = Y-T
+290 goto 180
+300 REM "A"
+310 clear
+320 LET X = X-T
+330 goto 180
+340 REM "S"
+350 clear
+360 LET Y = Y+T
+370 goto 180
+380 REM "D"
+390 clear
+400 LET X = X+T
+410 goto 180
+420 
+430 print "Close"
+440 
+450 REM "L = SHOOT"
+460 DRAWROW Y, X+5, 128, 2
+470 delay 200
+480 DRAWROW Y, X+5, 128, 2
+490 goto 180

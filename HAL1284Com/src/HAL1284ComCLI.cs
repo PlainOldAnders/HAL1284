@@ -79,16 +79,9 @@ namespace HAL1284Comm
 
             foreach (string line in lines)
             {
-                if (line.Contains("//") && line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries).Length == 1)
-                {
-                    Console.WriteLine("//" + line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries)[0]);
-                    sb.AppendLine("//" + line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries)[0]);
-                }
-                else
-                {
-                    Console.WriteLine((index * 10).ToString() + " " + line);
-                    sb.AppendLine((index * 10).ToString() + " " + line);
-                }
+                Console.WriteLine((index * 10).ToString() + " " + line);
+                sb.AppendLine((index * 10).ToString() + " " + line);
+
                 index++;
             }
 
@@ -174,20 +167,8 @@ namespace HAL1284Comm
 
             foreach (string line in lines)
             {
-                string[] newLines = line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries);
-
-                if (newLines.Length == 2)
-                {
-                    port.WriteLine(newLines[0]);
-                    Console.WriteLine(newLines[0]);
-                }
-                else
-                {
-                    if (!line.Contains("//")) {
-                        port.WriteLine(line);
-                        Console.WriteLine(line);
-                    }
-                }
+                port.WriteLine(line);
+                Console.WriteLine(line);
 
                 Thread.Sleep(this.writeSpeed);
             }

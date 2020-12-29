@@ -154,16 +154,9 @@ namespace myform
 
             foreach (string line in lines)
             {
-                if (line.Contains("//") && line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries).Length == 1)
-                {
-                    Console.WriteLine("//" + line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries)[0]);
-                    sb.AppendLine("//" + line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries)[0]);
-                }
-                else
-                {
-                    Console.WriteLine((index * 10).ToString() + " " + line);
-                    sb.AppendLine((index * 10).ToString() + " " + line);
-                }
+                Console.WriteLine((index * 10).ToString() + " " + line);
+                sb.AppendLine((index * 10).ToString() + " " + line);
+
                 index++;
             }
 
@@ -214,7 +207,6 @@ namespace myform
         void fileMode()
         {
             SerialPort port = setupSerialPort();
-            
 
             if (port == null)
             {
@@ -223,28 +215,15 @@ namespace myform
             }
 
             port.Open();
-			
-			string pathInput = openFile();
+
+            string pathInput = openFile();
 
             string[] lines = System.IO.File.ReadAllLines(@pathInput);
 
             foreach (string line in lines)
             {
-                string[] newLines = line.Split(new[] { "//" }, StringSplitOptions.RemoveEmptyEntries);
-
-                if (newLines.Length == 2)
-                {
-                    port.WriteLine(newLines[0]);
-                    Console.WriteLine(newLines[0]);
-                }
-                else
-                {
-                    if (!line.Contains("//"))
-                    {
-                        port.WriteLine(line);
-                        Console.WriteLine(line);
-                    }
-                }
+                port.WriteLine(line);
+                Console.WriteLine(line);
 
                 Thread.Sleep(this.writeSpeed);
             }
@@ -253,15 +232,17 @@ namespace myform
 
         SerialPort setupSerialPort()
         {
-			string[] ports = SerialPort.GetPortNames();
-			if(ports.Length == 0) return null;
-			SerialPort sp = new SerialPort();
+            string[] ports = SerialPort.GetPortNames();
+
+            if (ports.Length == 0) return null;
+
+            SerialPort sp = new SerialPort();
+
             if (this.comPortVal == "manual")
             {
                 var formPopup = new Form();
 
                 var radButs = new List<RadioButton>();
-                
 
                 for (int i = 0; i < ports.Length; i++)
                 {
@@ -291,9 +272,8 @@ namespace myform
 
                 formPopup.ShowDialog(form1);
 
-                
                 sp.BaudRate = 9600;
-				
+
                 return sp;
             }
             else
@@ -315,13 +295,12 @@ namespace myform
 
         private void serialOkBut(object sender, System.EventArgs e, Form formPopup, List<RadioButton> list, SerialPort sp)
         {
-			
             foreach (RadioButton rdb in list)
             {
                 if (rdb.Checked)
                 {
-					Console.WriteLine(rdb.Text);
-					sp.PortName = rdb.Text;
+                    Console.WriteLine(rdb.Text);
+                    sp.PortName = rdb.Text;
                 }
             }
             formPopup.Close();

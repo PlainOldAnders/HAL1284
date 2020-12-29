@@ -1,0 +1,44 @@
+REM "Initialize notes"
+A = 440
+B = 490
+C = 260
+D = 290
+E = 330
+F = 350
+G = 392
+
+REM "Tempo"
+T = 300
+
+TONEW E, 1*T
+TONEW E, 1*T
+TONEW E, 2*T
+
+TONEW E, 1*T
+TONEW E, 1*T
+TONEW E, 2*T
+
+TONEW E, 1*T
+TONEW G, 1*T
+TONEW C, 1*T
+TONEW D, 1*T
+TONEW E, 4*T
+
+DELAY 1*T
+
+TONEW F, 1*T
+TONEW F, 1*T
+TONEW F, 1*T
+TONEW F, 1*T
+TONEW F, 1*T
+
+TONEW E, 1*T
+TONEW E, 1*T
+TONEW E, 1*T
+TONEW E, 1*T
+
+TONEW D, 1*T 
+TONEW D, 1*T 
+TONEW E, 1*T 
+TONEW D, 2*T 
+TONEW G, 2*T 
